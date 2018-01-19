@@ -8,30 +8,30 @@ import '@stencil/router';
 
 
 import {
-  AppHome as AppHome
-} from './components/app-home/app-home';
+  MyComponent as TodoList
+} from './components/todo-list/todo-list';
 
 declare global {
-  interface HTMLAppHomeElement extends AppHome, HTMLElement {
+  interface HTMLTodoListElement extends TodoList, HTMLElement {
   }
-  var HTMLAppHomeElement: {
-    prototype: HTMLAppHomeElement;
-    new (): HTMLAppHomeElement;
+  var HTMLTodoListElement: {
+    prototype: HTMLTodoListElement;
+    new (): HTMLTodoListElement;
   };
   interface HTMLElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "todo-list": HTMLTodoListElement;
   }
   interface ElementTagNameMap {
-    "app-home": HTMLAppHomeElement;
+    "todo-list": HTMLTodoListElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-home": JSXElements.AppHomeAttributes;
+      "todo-list": JSXElements.TodoListAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppHomeAttributes extends HTMLAttributes {
-      
+    export interface TodoListAttributes extends HTMLAttributes {
+      items?: any[];
     }
   }
 }
