@@ -1,0 +1,43 @@
+todo-list{
+
+    div > div{
+        margin-bottom: 16px;
+    }
+    #addBtn{
+        border: solid 1px;
+        background-color: transparent;
+    }
+
+    div{
+        min-width: 270px;
+        widows: 100%;
+        padding: 7px;
+    }
+
+    input[type=text]{
+        background: transparent;
+        border: none;
+        border-bottom: solid 1px #ccc;
+        margin-right: 10px;
+        width: 55%;
+    }
+
+    input[type=checkbox], select, button{
+        float: right;
+    }
+    
+    label {
+        padding-left: 10px;
+    }
+
+    .low{
+        background-color: #EDF7DD;
+    }
+    .middle{
+        background-color: #FFEBC3;
+    }
+    .high{
+        background-color: #FDC2C4;
+    }
+
+}
