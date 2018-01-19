@@ -31,10 +31,16 @@ export class MyComponent {
             text: `todo-item: ${this.itemList.length}`, priority: "low", selected: false, id: this.itemList.length
         }
         this.itemList = [...this.itemList, item];
-        this.addItemListEmpty(item.id);
     }
     addItemListEmpty(id: number) {
         this.itemListEmpty = [...this.itemListEmpty, id];
+    }
+
+    removeTodo(id: number){
+        this.itemList = [... this.itemList
+            .filter((item) => item.id !== id)
+            .map((result, index) => result = {... result, id: index})
+        ];
     }
 
 
@@ -45,7 +51,7 @@ export class MyComponent {
                 (todo) =>
                     <div class={todo.priority}>
                         <label>{todo.text}</label>
-                        <label class="disable" >&#10005;</label>
+                        <label onClick={() => this.removeTodo(todo.id)} >&#10005;</label>
                     </div>
             )
         }
